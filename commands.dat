@@ -1,4 +1,4 @@
-# Commnd to liust al the images 
+# Commnd to list al the images 
 docker images 
 
 #Command to list all the containers 
