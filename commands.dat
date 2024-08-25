@@ -1,0 +1,11 @@
+# Commnd to liust al the images 
+docker images 
+
+#Command to list all the containers 
+docker ps -a 
+
+# Command to delete a container 
+docker rm [container_name] 
+
+#Command to run a docker image 
+docker run --name [container_name] -p [localhost_port]:[container_port] [image_name]
