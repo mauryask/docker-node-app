@@ -1,17 +1,33 @@
-# Commnd to list all the images 
+# build docker image 
+docker build -t [image_name] . <- location of the Dockerfile
+
+# list all the images 
 docker images 
 
-#Command to list all the running containers
+# list all the running containers
 docker ps 
 
-#Command to list all the containers running and stopped ones
+# list all the containers running and stopped ones
 docker ps -a 
 
-#Command to stop a running container 
+# stop a running container 
 docker stop [container_name]
 
-# Command to delete a container 
-docker rm [container_name] 
+# delete a container (an under use contaienr can be removed with -f flag) 
+docker container rm [container_name] 
 
-#Command to run a docker image 
+# run a docker image 
 docker run --name [container_name] -p [localhost_port]:[container_port] [image_name]
+
+# run the container in detach mode: so that it does n ot blocks the terminal 
+docker run --name [container_name] -p [localhost_port]:[container_port] -d [image_name]
+
+# start a preexisting container 
+docker start [container_name]
+
+# delete a docker image, note: the image to be deleted must not being used by any container
+docker image rm [image_name] 
+
+# delete images forcefully that are in use by some container 
+docker image rm [image_name] -f 
+
