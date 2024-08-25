@@ -1,8 +1,14 @@
-# Commnd to list al the images 
+# Commnd to list all the images 
 docker images 
 
-#Command to list all the containers 
+#Command to list all the running containers
+docker ps 
+
+#Command to list all the containers running and stopped ones
 docker ps -a 
+
+#Command to stop a running container 
+docker stop [container_name]
 
 # Command to delete a container 
 docker rm [container_name] 
